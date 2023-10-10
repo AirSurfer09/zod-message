@@ -1,0 +1,26 @@
+{
+  "name": "@convai/zod-message",
+  "version": "0.0.1",
+  "description": "",
+  "main":"dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --sourcemap",
+    "lint": "tsc",
+    "dev":"vitest",
+    "test":"vitest run",
+    "ci" : "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && pnpm publish"
+  },
+  "author": "Saurav",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  }
+
+}
+
