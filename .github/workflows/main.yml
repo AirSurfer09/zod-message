@@ -17,5 +17,5 @@ jobs:
                 node-version: 16.x
                 cache: pnpm
 
-            - run: pnpm install --forzen-lockfile
+            - run: pnpm install --forzen-lockfile --config.target_arch=x64
             - run: pnpm run ci
